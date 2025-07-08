@@ -8,6 +8,8 @@ function h($str)
 //DB接続関数：db_conn() 
 //※関数を作成し、内容をreturnさせる。
 //※ DBname等、今回の授業に合わせる。
+
+
 function db_conn(){
     try {
         $db_name = '**************';    //データベース名
