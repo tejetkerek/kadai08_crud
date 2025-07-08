@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棚卸し管理システム - 効率的な棚卸しを実現</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .gradient-success {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .icon-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style="background-image: url('pics/supermarket2.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+    <!-- Header -->
+    <header class="gradient-primary text-white relative overflow-hidden">
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-6 py-8">
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 mb-6">
+                    <i data-lucide="package" class="h-10 w-10 text-white"></i>
+                </div>
+                <h1 class="text-5xl font-bold mb-4">棚卸し管理システム</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">
+                    棚卸しの日を"なんとか終わる日"から"普通の業務日"に変える
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="index.php" class="btn-hover bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold text-lg">
+                        <i data-lucide="play" class="inline-block w-5 h-5 mr-2"></i>
+                        利用してみる
+                    </a>
+                    <a href="#features" class="btn-hover bg-white/20 text-white px-8 py-3 rounded-lg font-semibold text-lg">
+                        <i data-lucide="info" class="inline-block w-5 h-5 mr-2"></i>
+                        機能を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">主要機能</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+                    <div class="gradient-primary w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">人員管理</h3>
+                    <p class="text-gray-700 mb-4">
+                        チームメンバーの登録、役割割り当て、労働時間の管理を効率的に行います。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• 複数メンバーの一括登録</li>
+                        <li>• 労働時間の自動計算</li>
+                        <li>• 休憩時間の管理</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+                    <div class="gradient-secondary w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">進捗管理</h3>
+                    <p class="text-gray-700 mb-4">
+                        リアルタイムで棚卸しの進捗状況を可視化し、効率的な作業をサポートします。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• エリア別進捗表示</li>
+                        <li>• 担当者別進捗管理</li>
+                        <li>• 遅延アラート機能</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+                    <div class="gradient-success w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="calendar" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">スケジュール最適化</h3>
+                    <p class="text-gray-700 mb-4">
+                        AIを活用した最適なスケジュール作成で、棚卸し作業を効率化します。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• AI推奨スケジュール</li>
+                        <li>• 人員配置の最適化</li>
+                        <li>• 時間配分の自動調整</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-gray-100/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">導入メリット</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">作業効率の向上</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="gradient-primary w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">時間短縮</h4>
+                                <p class="text-gray-600">従来の50%の時間で棚卸しを完了</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gradient-primary w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">ミス削減</h4>
+                                <p class="text-gray-600">人的ミスを90%削減</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gradient-primary w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">リアルタイム管理</h4>
+                                <p class="text-gray-600">進捗状況をリアルタイムで把握</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">コスト削減</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="gradient-primary w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">人件費削減</h4>
+                                <p class="text-gray-600">必要人員を30%削減</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gradient-primary w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">オーバータイム削減</h4>
+                                <p class="text-gray-600">残業時間を大幅に削減</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gradient-primary w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">精度向上</h4>
+                                <p class="text-gray-600">棚卸し精度を95%以上に向上</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-primary text-white relative overflow-hidden">
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">今すぐ始めましょう</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                棚卸しの効率化で、あなたの業務を変革します。
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="index.php" class="btn-hover bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg">
+                    <i data-lucide="rocket" class="inline-block w-5 h-5 mr-2"></i>
+                    利用してみる
+                </a>
+                <a href="register.php" class="btn-hover bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg">
+                    <i data-lucide="user-plus" class="inline-block w-5 h-5 mr-2"></i>
+                    人員登録
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 棚卸し管理システム. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lucideアイコンの初期化
+        lucide.createIcons();
+    </script>
+</body>
+</html>
